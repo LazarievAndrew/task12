@@ -40,8 +40,8 @@ var y = getNumber();
 //     }
 // }
 
-function doMath(x, znak, y){
-    return eval(x + znak + y);
+function doMath(i, j, k){
+    return eval(i + j + k);
 }
 
 var act = doMath(x, znak, y);
