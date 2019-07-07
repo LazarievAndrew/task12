@@ -25,18 +25,23 @@ var x = getNumber();
 var znak = getSymbol();
 var y = getNumber();
 
+// первое решение:
+// function doMath(x, znak, y){
+//     if (znak == '+'){
+//         return x + y;
+//     } else if (znak == '-'){
+//         return x - y;
+//     } else if (znak == '*'){
+//         return x * y;
+//     } else if(znak == '/'){
+//         return x / y;
+//     } else {
+//         return x % y;
+//     }
+// }
+
 function doMath(x, znak, y){
-    if (znak == '+'){
-        return x + y;
-    } else if (znak == '-'){
-        return x - y;
-    } else if (znak == '*'){
-        return x * y;
-    } else if(znak == '/'){
-        return x / y;
-    } else {
-        return x % y;
-    }
+    return eval(x + znak + y);
 }
 
 var act = doMath(x, znak, y);
@@ -44,7 +49,7 @@ var act = doMath(x, znak, y);
 // Вывод решения:
 
 function actOutput(){
-    if (act === Infinity){
+    if (act === Infinity || isNaN(act)){
         alert ('На нуль делить нельзя!!!');
     } else {
         alert ('Результатом действия функции  doMath(' + x + ', ' + znak +', ' + y + ') будет число ' + act);
